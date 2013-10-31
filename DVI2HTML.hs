@@ -141,6 +141,10 @@ execDVIInstr instr = do
            put $ stackstate
                   { currentFont = (definedFonts stackstate) !! (fnum -1) }
            lift Nothing
+         Special length descr -> do
+           lift Nothing
+         Fontdef fontnum checksum s d areaLength fullFontPath -> do
+           put $ stackstate
          
            
 

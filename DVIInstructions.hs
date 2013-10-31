@@ -54,7 +54,8 @@ instance Show DVIInstr where
   show (Zi dist) = "Zi " ++ show dist
   show (FntNum num) = "FontNum " ++ show num
   show (Special descrLength descr) = "Special; " ++ show descrLength ++ descr
-  show (FontDef _ _ _ _ _ _ fontpath) = "FontDef; path: " ++ fontpath
+  show (FontDef _ _ _ _ _ _ fontpath)
+     = "FontDef;" ++ fontpath
   show (Postamble _ _ _ _ _ _ _ _) = "Postamble"
   show (PostPost _ _) = "Post_Post"
 
